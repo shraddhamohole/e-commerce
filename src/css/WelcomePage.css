@@ -1,0 +1,61 @@
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.welcome-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Overlay Box on Image */
+.welcome-box-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.85); /* black box with some transparency */
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 600px;
+}
+
+/* White Heading Text */
+.welcome-text {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+/* Modern Button Style */
+.start-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
