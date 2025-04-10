@@ -3,21 +3,22 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #fff;
-  padding: 10px;
-  box-sizing: border-box;
+  background-color: #f7f7f7;
+  padding: 0 20px; /* padding for small screens */
 }
 
 .image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 100%;
+  max-width: 1000px;
+  height: auto;
+  overflow: hidden;
 }
 
 .welcome-image {
   width: 100%;
   height: auto;
-  display: block;
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -26,72 +27,57 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 30px;
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  width: 80%;
-  max-width: 600px;
+  max-width: 80%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .welcome-text {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #fff;
-  word-wrap: break-word;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .start-button {
-  background-color: #ffffff;
-  color: #000000;
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
   border: none;
-  padding: 14px 28px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: 20px;
+  transition: background 0.3s ease;
 }
 
 .start-button:hover {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #0056b3;
 }
-
-@media screen and (max-width: 768px) {
-  .welcome-text {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .start-button {
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-
+@media (max-width: 768px) {
   .welcome-box-overlay {
     padding: 20px;
-    width: 90%;
-    max-width: 500px;
+    max-width: 90%;
   }
-}
 
-@media screen and (max-width: 480px) {
   .welcome-text {
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
   }
 
   .start-button {
-    padding: 12px 20px;
-    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text {
+    font-size: 1.2rem;
   }
 
   .welcome-box-overlay {
-    width: 95%;
-    max-width: 450px;
+    padding: 15px;
   }
 }
