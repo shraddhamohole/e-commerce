@@ -4,6 +4,8 @@
   align-items: center;
   height: 100vh;
   background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .image-wrapper {
@@ -19,14 +21,13 @@
   border-radius: 10px;
 }
 
-/* Overlay Box on Image */
 .welcome-box-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.85); /* black box with some transparency */
-  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 30px;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
@@ -34,28 +35,63 @@
   max-width: 600px;
 }
 
-/* White Heading Text */
 .welcome-text {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   color: #fff;
+  word-wrap: break-word;
 }
 
-/* Modern Button Style */
 .start-button {
   background-color: #ffffff;
   color: #000000;
   border: none;
   padding: 14px 28px;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 20px;
 }
 
 .start-button:hover {
   background-color: #007bff;
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .welcome-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .start-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .welcome-box-overlay {
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .welcome-text {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .start-button {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+
+  .welcome-box-overlay {
+    width: 95%;
+    max-width: 450px;
+  }
 }
