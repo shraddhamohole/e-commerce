@@ -8,7 +8,7 @@ function CategoryPage() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.escuelajs.co/api/v1/products')
+    fetch('https://api.escuelajs.co/api/v1/categories')
       .then(res => res.json())
       .then(data => setCategories(data.slice(0, 5))) 
       .catch(err => console.error('Error fetching categories:', err));
